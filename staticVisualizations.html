@@ -86,14 +86,12 @@
             overflow: visible;
         }
 
-        /* Add specific styles for the D3 visualizations */
         #colorplot, #clarityplot {
             width: 100%;
             height: 100%;
             overflow: visible;
         }
 
-        /* Tooltip styles */
         #colortooltip, #claritytooltip {
             position: absolute;
             opacity: 0;
@@ -204,80 +202,10 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Decision Tree -->
-            <div class="accordion-section">
-                <div class="accordion-header">
-                    <h2><span class="visualization-type">🖼️</span> Decision Tree</h2>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="accordion-content">
-                    <div class="visualization-container" style="height: 800px;">
-                        <p>
-                            We used a Decision Tree Classifier and feature importance analysis to study which factors influence diamond prices. 
-                            The model achieved an accuracy of 66.96%, indicating that the classifier is reasonably effective and can be used for 
-                            further research.
-                            <br/>
-                            <br/>
-                            The feature importance results show that carat size is by far the most significant factor affecting diamond price. 
-                            Other features, such as table and depth, have much smaller impacts. This suggests that when predicting or 
-                            analyzing diamond prices, carat size should be given the most attention.
-                            <br/>
-                            <br/>
-                            Overall, the decision tree visualization and confusion matrix support these findings and provide a solid foundation 
-                            for deeper exploration in future studies.
-                            <br/>
-                            <br/>
-                            </p>
-                        <embed src="3in1.png" width=auto height="500px" style="display: block; margin: 0 auto;">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Side-by-side Box Plots -->
-            <div class="accordion-section">
-                <div class="accordion-header">
-                    <h2><span class="visualization-type">🖼️</span> Side-by-Side Box Plots</h2>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="accordion-content">
-                    <div class="visualization-container" style="height: 900px;">
-                        <p>
-                            In addition to the Decision Tree analysis, We also examined the price distribution of diamonds by categorical features 
-                            like cut, color, and clarity.
-                            <br/>
-                            <br/>
-                            From the box plots we found the following:
-                            <br/>
-                            <br/>
-                        </p>
-                        <ul>
-                            <li>
-                                <Strong>Price by Cut</Strong>: The price distributions are relatively similar across different cut qualities 
-                                (Ideal, Premium, Good, Very Good, Fair), though Ideal and Premium cuts tend to have slightly higher median prices. 
-                                However, the overall price spread does not vary significantly with cut, 
-                                suggesting that cut has some influence but is not the strongest factor.
-                            </li>
-                            <li>
-                                <Strong>Price by Color</Strong>: The median price tends to decrease slightly from color grade E and I down to D and G, 
-                                but overall the differences are not very large. This indicates that color has only a moderate impact on price.
-                            </li>
-                            <li>
-                                <Strong>Price by Clarity</Strong>: Clarity appears to have a more noticeable effect. Diamonds with lower clarity grades (SI2, SI1, VS1) 
-                                show higher medians and wider price ranges. Interestingly, the very highest clarity grades (IF, VVS1) 
-                                do not necessarily correspond to the highest median prices, possibly because these diamonds may often be smaller 
-                                or more standardized.
-                            </li>
-                        </ul>
-                        <br/>
-                        <br/>
-                        <embed src="sbsBoxPlots.png" width=auto height="425px" style="display: block; margin: 0 auto;">
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <a href="index.html" class="back-button">Back to Home</a>
+        <a href="index.html" class="button-edit">Back to Home</a>
+        <a href="interactiveVisualizations.html" class="button-edit">Go to Part 3</a>
     </div>
 
     <footer>

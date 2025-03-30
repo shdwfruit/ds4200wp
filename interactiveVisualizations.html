@@ -72,7 +72,6 @@
             margin: 1rem 0;
         }
 
-        /* Add styles for the visualizations */
         .tooltip {
             position: absolute;
             padding: 10px;
@@ -165,6 +164,77 @@
                 </div>
             </div>
 
+            <!-- Decision Tree -->
+            <div class="accordion-section">
+                <div class="accordion-header">
+                    <h2><span class="visualization-type">🖼️</span> Decision Tree</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="visualization-container" style="height: 800px;">
+                        <p>
+                            We used a Decision Tree Classifier and feature importance analysis to study which factors influence diamond prices. 
+                            The model achieved an accuracy of 66.96%, indicating that the classifier is reasonably effective and can be used for 
+                            further research.
+                            <br/>
+                            <br/>
+                            The feature importance results show that carat size is by far the most significant factor affecting diamond price. 
+                            Other features, such as table and depth, have much smaller impacts. This suggests that when predicting or 
+                            analyzing diamond prices, carat size should be given the most attention.
+                            <br/>
+                            <br/>
+                            Overall, the decision tree visualization and confusion matrix support these findings and provide a solid foundation 
+                            for deeper exploration in future studies.
+                            <br/>
+                            <br/>
+                            </p>
+                        <embed src="3in1.png" width=auto height="500px" style="display: block; margin: 0 auto;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Side-by-side Box Plots -->
+            <div class="accordion-section">
+                <div class="accordion-header">
+                    <h2><span class="visualization-type">🖼️</span> Side-by-Side Box Plots</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="visualization-container" style="height: 900px;">
+                        <p>
+                            In addition to the Decision Tree analysis, We also examined the price distribution of diamonds by categorical features 
+                            like cut, color, and clarity.
+                            <br/>
+                            <br/>
+                            From the box plots we found the following:
+                            <br/>
+                            <br/>
+                        </p>
+                        <ul>
+                            <li>
+                                <Strong>Price by Cut</Strong>: The price distributions are relatively similar across different cut qualities 
+                                (Ideal, Premium, Good, Very Good, Fair), though Ideal and Premium cuts tend to have slightly higher median prices. 
+                                However, the overall price spread does not vary significantly with cut, 
+                                suggesting that cut has some influence but is not the strongest factor.
+                            </li>
+                            <li>
+                                <Strong>Price by Color</Strong>: The median price tends to decrease slightly from color grade E and I down to D and G, 
+                                but overall the differences are not very large. This indicates that color has only a moderate impact on price.
+                            </li>
+                            <li>
+                                <Strong>Price by Clarity</Strong>: Clarity appears to have a more noticeable effect. Diamonds with lower clarity grades (SI2, SI1, VS1) 
+                                show higher medians and wider price ranges. Interestingly, the very highest clarity grades (IF, VVS1) 
+                                do not necessarily correspond to the highest median prices, possibly because these diamonds may often be smaller 
+                                or more standardized.
+                            </li>
+                        </ul>
+                        <br/>
+                        <br/>
+                        <embed src="sbsBoxPlots.png" width=auto height="425px" style="display: block; margin: 0 auto;">
+                    </div>
+                </div>
+            </div>
+
             <!-- Price vs. Carat vs. Cut Visualization -->
             <div class="accordion-section">
                 <div class="accordion-header">
@@ -240,6 +310,76 @@
                     </div>
                 </div>
             </div>
+
+            <!-- XYZ Visualization -->
+            <div class="accordion-section">
+                <div class="accordion-header">
+                    <h2><span class="visualization-type">📊</span> XYZ Dimensions Analysis</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="visualization-container" style="height: 1400px;">
+                        <div id="xyz-analysis" class="interactive-visualization">
+                            <p>
+                                <Strong>Relationship Between Price and Dimensions</Strong>
+                                <br/>
+                                The scatter plot in the top-left corner of the first image shows a strong positive relationship between carat and price, 
+                                consistent with earlier findings. However, since carat is derived from the diamond's volume, 
+                                it's closely tied to the dimensions x, y, and z. This implies that as x, y, and z increase, carat 
+                                and therefore price also tend to increase. We see that diamonds with larger dimensions often fall into 
+                                higher price ranges, but the relationship becomes more dispersed at higher prices, suggesting that other factors 
+                                (like cut and clarity) also contribute to the final value.
+                                <br/>
+                                <br/>
+                                <ul>
+                                    <li>
+                                        <Strong>x-Dimension (Length) Patterns</Strong>: Across all price ranges, 
+                                        the x dimension is typically between 4 mm and 8 mm, peaking around 5-6.5 mm. 
+                                        Lower-priced diamonds (under 4,000) tend to have smaller x-values, often below 6 mm, 
+                                        while higher-priced diamonds frequently exceed 6 mm in length. As price increases, 
+                                        the frequency of x-values also shifts to the right, with higher-priced diamonds having larger lengths. 
+                                        In the highest price range (above $16,000), x-dimensions are frequently above 8 mm, 
+                                        indicating that longer diamonds contribute to premium pricing.
+                                    </li>
+                                    <li>
+                                        <Strong>y-Dimension (Width) Patterns</Strong>: The y dimension follows a similar distribution to x. 
+                                        For most diamonds, y ranges from 4 mm to 8 mm, with a concentration between 5.5 and 7.5 mm. 
+                                        In lower price ranges, y dimensions are more concentrated at the lower end (around 5-6 mm), 
+                                        while in higher price brackets, y spreads out towards 8 mm and beyond. In the highest price segment, 
+                                        y-dimension values approach or exceed 9 mm, reinforcing the pattern that physically larger diamonds 
+                                        fetch higher prices.
+                                    </li>
+                                    <li>
+                                        <Strong>z-Dimension (Depth) Patterns</Strong>: The z dimension also reflects a consistent trend: 
+                                        as price increases, so does z. For most diamonds, z ranges from 2 mm to 5.5 mm, with peaks around 3.5-4.5 mm. 
+                                        High-priced diamonds typically have a z-dimension closer to 5 mm or above, suggesting greater depth. 
+                                        However, z shows a slightly narrower spread than x and y, likely due to tighter tolerances in 
+                                        cut quality and proportions required for optimal brilliance.
+                                    </li>
+                                </ul>
+                                <br/>
+                                <Strong>Conclusion</Strong>: 
+                                <br/>
+                                The physical dimensions x, y, and z are highly correlated with carat and therefore with price. 
+                                As these dimensions increase, so does the price of the diamond. Among them, the x and y dimensions 
+                                (length and width) show the most noticeable spread across price categories, 
+                                making them good indicators of size and price potential. While z (depth) also increases with price, 
+                                its tighter distribution reflects stricter design constraints. Overall, the relationship between diamond price and size 
+                                is both strong and nonlinear, and x, y, z offer useful predictive insights when assessing diamond value.
+                                <br/>
+                                <br/>
+                            </p>
+                            <iframe 
+                                src="x_y_z.html" 
+                                style="width: 100%; height: 800px; border: none;" 
+                                scrolling="no">
+                            </iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             <!-- Base Reversal Visualization -->
             <div class="accordion-section">
                 <div class="accordion-header">
@@ -315,77 +455,10 @@
                 </div>
             </div>
 
-            <!-- XYZ Visualization -->
-            <div class="accordion-section">
-                <div class="accordion-header">
-                    <h2><span class="visualization-type">📊</span> XYZ Dimensions Analysis</h2>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="accordion-content">
-                    <div class="visualization-container" style="height: 1400px;">
-                        <div id="xyz-analysis" class="interactive-visualization">
-                            <p>
-                                <Strong>Relationship Between Price and Dimensions</Strong>
-                                <br/>
-                                The scatter plot in the top-left corner of the first image shows a strong positive relationship between carat and price, 
-                                consistent with earlier findings. However, since carat is derived from the diamond's volume, 
-                                it's closely tied to the dimensions x, y, and z. This implies that as x, y, and z increase, carat 
-                                and therefore price also tend to increase. We see that diamonds with larger dimensions often fall into 
-                                higher price ranges, but the relationship becomes more dispersed at higher prices, suggesting that other factors 
-                                (like cut and clarity) also contribute to the final value.
-                                <br/>
-                                <br/>
-                                <ul>
-                                    <li>
-                                        <Strong>x-Dimension (Length) Patterns</Strong>: Across all price ranges, 
-                                        the x dimension is typically between 4 mm and 8 mm, peaking around 5-6.5 mm. 
-                                        Lower-priced diamonds (under 4,000) tend to have smaller x-values, often below 6 mm, 
-                                        while higher-priced diamonds frequently exceed 6 mm in length. As price increases, 
-                                        the frequency of x-values also shifts to the right, with higher-priced diamonds having larger lengths. 
-                                        In the highest price range (above $16,000), x-dimensions are frequently above 8 mm, 
-                                        indicating that longer diamonds contribute to premium pricing.
-                                    </li>
-                                    <li>
-                                        <Strong>y-Dimension (Width) Patterns</Strong>: The y dimension follows a similar distribution to x. 
-                                        For most diamonds, y ranges from 4 mm to 8 mm, with a concentration between 5.5 and 7.5 mm. 
-                                        In lower price ranges, y dimensions are more concentrated at the lower end (around 5-6 mm), 
-                                        while in higher price brackets, y spreads out towards 8 mm and beyond. In the highest price segment, 
-                                        y-dimension values approach or exceed 9 mm, reinforcing the pattern that physically larger diamonds 
-                                        fetch higher prices.
-                                    </li>
-                                    <li>
-                                        <Strong>z-Dimension (Depth) Patterns</Strong>: The z dimension also reflects a consistent trend: 
-                                        as price increases, so does z. For most diamonds, z ranges from 2 mm to 5.5 mm, with peaks around 3.5-4.5 mm. 
-                                        High-priced diamonds typically have a z-dimension closer to 5 mm or above, suggesting greater depth. 
-                                        However, z shows a slightly narrower spread than x and y, likely due to tighter tolerances in 
-                                        cut quality and proportions required for optimal brilliance.
-                                    </li>
-                                </ul>
-                                <br/>
-                                <Strong>Conclusion</Strong>: 
-                                <br/>
-                                The physical dimensions x, y, and z are highly correlated with carat and therefore with price. 
-                                As these dimensions increase, so does the price of the diamond. Among them, the x and y dimensions 
-                                (length and width) show the most noticeable spread across price categories, 
-                                making them good indicators of size and price potential. While z (depth) also increases with price, 
-                                its tighter distribution reflects stricter design constraints. Overall, the relationship between diamond price and size 
-                                is both strong and nonlinear, and x, y, z offer useful predictive insights when assessing diamond value.
-                                <br/>
-                                <br/>
-                            </p>
-                            <iframe 
-                                src="x_y_z.html" 
-                                style="width: 100%; height: 800px; border: none;" 
-                                scrolling="no">
-                            </iframe>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <a href="index.html" class="back-button">Back to Home</a>
+        <a href="staticVisualizations.html" class="button-edit">Go to Part 2</a>
+        <a href="conclusion.html" class="button-edit">Go to Conclusion</a>
     </div>
 
     <footer>

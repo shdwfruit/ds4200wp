@@ -1,5 +1,3 @@
-// Prepare you data and load the data again. 
-// This data should contains three columns, platform, post type and average number of likes. 
 const colorPriceAvg = d3.csv("colorPriceAvg.csv");
 
 colorPriceAvg.then(function(data) {
@@ -167,8 +165,6 @@ colorPriceAvg.then(function(data) {
 
 });
 
-// Prepare you data and load the data again. 
-// This data should contains three columns, platform, post type and average number of likes. 
 const clarityPriceAvg = d3.csv("clarityPriceAvg.csv");
 
 clarityPriceAvg.then(function(data) {

@@ -97,7 +97,7 @@
 </head>
 <body>
     <header>
-        <h1> Part 3: Mulitvariate Analysis of Diamond Pricing Factors </h1>
+        <h1> Mulitvariate Analysis of Diamond Pricing Factors </h1>
     </header>
 
     <div class="container">
@@ -110,7 +110,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="accordion-content">
-                    <div class="visualization-container" style="height: 1325px;">
+                    <div class="visualization-container" style="height: 1200px;">
                         <div id="scatter_price_carat_cut" class="interactive-visualization">
                             <p>
                                 <Strong>General Pattern: All Cuts Combined</Strong>
@@ -171,7 +171,8 @@
                             </p>
                             <iframe 
                                 src="scatter_price_carat_cut.html" 
-                                style="width: 100%; height: 600px; border: none;" 
+                                width="775px"
+                                style="height: 500px; border: none; display: block; margin: 0 auto;" 
                                 scrolling="no">
                             </iframe>
                         </div>
@@ -186,7 +187,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="accordion-content">
-                    <div class="visualization-container" style="height: 1775px;">
+                    <div class="visualization-container" style="height: 1675px;">
                         <div id="base-reversal" class="interactive-visualization">
                             <p>
                                 The scatter plots show a clear and strong positive relationship between carat and price. 
@@ -246,7 +247,7 @@
                             </p>
                             <iframe 
                                 src="base_reversal.html" 
-                                style="width: 100%; height: 800px; border: none;" 
+                                style="width: 875px; height: 800px; display: block; border: none; margin: 0 auto;" 
                                 scrolling="no">
                             </iframe>
                         </div>
@@ -263,7 +264,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="accordion-content">
-                    <div class="visualization-container" style="height: 910px;">
+                    <div class="visualization-container" style="height: 675px;">
                         <p>
                             This bar chart illustrates the relationship between average diamond price, cut quality, and clarity grade. 
                             The x-axis displays different cut categories—Fair, Good, Very Good, Premium, and Ideal
@@ -280,7 +281,7 @@
                             and price is complex and influenced by interactions with other variables, particularly carat, making it important to 
                             analyze multiple features together when evaluating diamond value.
                         </p>
-                        <svg id="clarityplot" style="width: 1000px; height: 750px"></svg>
+                        <svg id="clarityplot" style="width: 700px; height: 450px; display: block; margin: 0 auto;"></svg>
                         <div id="claritytooltip" style="
                         position: absolute;
                         background-color: white;
@@ -303,7 +304,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="accordion-content">
-                    <div class="visualization-container" style="height: 900px;">
+                    <div class="visualization-container" style="height: 675px;">
                         <p>
                             This bar chart illustrates the relationship between average diamond price, cut quality, and color grade. 
                             The x-axis categorizes diamonds by cut (Fair, Good, Very Good, Premium, and Ideal), 
@@ -320,7 +321,8 @@
                             diamond price is influenced by the interaction of multiple features—cut, color, and most importantly, carat—rather 
                             than any single attribute on its own.
                         </p>
-                        <svg id="colorplot" style="width: 1000px; height: 750px"></svg>
+                    </br>
+                        <svg id="colorplot" style="width: 700px; height: 750px; display: block; margin: 0 auto;"></svg>
                         <div id="colortooltip" style="
                         position: absolute;
                         background-color: white;
@@ -343,7 +345,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="accordion-content">
-                    <div class="visualization-container" style="height: 1400px;">
+                    <div class="visualization-container" style="height: 1475px;">
                         <div id="xyz-analysis" class="interactive-visualization">
                             <p>
                                 <Strong>Relationship Between Price and Dimensions</Strong>
@@ -396,7 +398,7 @@
                             </p>
                             <iframe 
                                 src="x_y_z.html" 
-                                style="width: 100%; height: 800px; border: none;" 
+                                style="width: 1400px; height: 800px; border: none; display: block; margin: 0 auto;" 
                                 scrolling="no">
                             </iframe>
                         </div>
@@ -441,8 +443,8 @@
                         </ul>
                         <iframe 
                             src="Price Distribution.html" 
-                            style="width: 1075px; height: 700px; border:none;" 
-                            scrolling="yes">
+                            style="width: 1225px; height: 700px; border:none; display: block; margin: auto 0;" 
+                            scrolling="no">
                         </iframe>
                     </div>
                 </div>
@@ -479,8 +481,12 @@
 
         </div>
 
-        <a href="staticVisualizations.html" class="button-edit">Go to Part 2</a>
-        <a href="conclusion.html" class="button-edit">Go to Conclusion</a>
+        <div class="visualization-buttons">
+            <a href="index.html" class="button">Introduction</a>
+            <a href="part2.html" class="button">Exploratory Data Analysis</a>
+            <a href="part3.html" class="button">Mulitvariate Analysis</a>
+            <a href="part4.html" class="button">Conclusion</a>
+        </div>
     </div>
 
     <footer>

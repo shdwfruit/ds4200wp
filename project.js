@@ -1,3 +1,5 @@
+// Prepare you data and load the data again. 
+// This data should contains three columns, platform, post type and average number of likes. 
 const colorPriceAvg = d3.csv("colorPriceAvg.csv");
 
 colorPriceAvg.then(function(data) {
@@ -9,14 +11,14 @@ colorPriceAvg.then(function(data) {
 
     // Define the dimensions and margins for the SVG
     let 
-      width = 1000, 
-      height = 600;
+      width = 800, 
+      height = 400;
 
     let margin = {
       top: 50,
       bottom: 50, 
-      left: 80, 
-      right: 120
+      left: 60, 
+      right: 50
     };
 
     // Create the SVG container
@@ -24,7 +26,7 @@ colorPriceAvg.then(function(data) {
                 .append('svg')
                 .attr('width', width)
                 .attr('height', height)
-                .style('background', 'lightblue');
+                .style('background', 'white');
     
 
     // Define four scales
@@ -47,9 +49,18 @@ colorPriceAvg.then(function(data) {
                 .domain([0, d3.max(data, d => d.average_price)])
                 .range([height - margin.bottom, margin.top]);
 
+    const redGradient = [
+      '#fcbba1',
+      '#fc9272',
+      '#fb6a4a',
+      '#ef3b2c',
+      '#cb181d',
+      '#a50f15',
+      '#67000d'
+    ];
     const color = d3.scaleOrdinal()
                     .domain([...new Set(data.map(d => d.color))])
-                    .range(d3.schemeSet1);   
+                    .range(redGradient);   
          
     // Add scales x0 and y  
     let x0scale = d3.scaleBand()
@@ -165,6 +176,8 @@ colorPriceAvg.then(function(data) {
 
 });
 
+// Prepare you data and load the data again. 
+// This data should contains three columns, platform, post type and average number of likes. 
 const clarityPriceAvg = d3.csv("clarityPriceAvg.csv");
 
 clarityPriceAvg.then(function(data) {
@@ -176,14 +189,14 @@ clarityPriceAvg.then(function(data) {
 
     // Define the dimensions and margins for the SVG
     let 
-      width = 1000, 
-      height = 600;
+      width = 800, 
+      height = 400;
 
     let margin = {
       top: 50,
       bottom: 50, 
-      left: 80, 
-      right: 120
+      left: 60, 
+      right: 50
     };
 
     // Create the SVG container
@@ -191,7 +204,7 @@ clarityPriceAvg.then(function(data) {
                 .append('svg')
                 .attr('width', width)
                 .attr('height', height)
-                .style('background', 'lightyellow');
+                .style('background', 'white');
     
 
     // Define four scales
@@ -214,9 +227,19 @@ clarityPriceAvg.then(function(data) {
                 .domain([0, d3.max(data, d => d.average_price)])
                 .range([height - margin.bottom, margin.top]);
 
+    const purpleGradient = [
+      '#c0a2e4',
+      '#aa89db',
+      '#9670d2',
+      '#8155c7',
+      '#6e3fb5',
+      '#5a2a91',
+      '#47126b',
+      '#2e004d'
+    ];
     const color = d3.scaleOrdinal()
                     .domain([...new Set(data.map(d => d.clarity))])
-                    .range(d3.schemeSet2);   
+                    .range(purpleGradient);   
          
     // Add scales x0 and y  
     let x0scale = d3.scaleBand()
